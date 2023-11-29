@@ -1,0 +1,54 @@
+{
+  "name": "lichess-helper",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Humberd",
+  "license": "MIT",
+  "main": "dist/index.user.js",
+  "scripts": {
+    "start": "cross-env PORT=8124 BROWSER=none FAST_REFRESH=false WDS_SOCKET_HOST=localhost react-app-rewired start ",
+    "build": "react-app-rewired build",
+    "build:compose-output":  "npm run build && npm run compose-output",
+    "compose-output": "node scripts/compose-output.js",
+    "version-updater": "node scripts/version-updater.js",
+    "debug-build": "react-app-rewired --inspect-brk=5858 build && npm run compose-output"
+  },
+  "dependencies": {
+    "classnames": "2.3.2",
+    "react": "18.2.0",
+    "react-app-rewired": "2.2.1",
+    "react-dom": "18.2.0",
+    "react-hook-form": "7.48.2",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
+    "@types/react": "18.2.38",
+    "@types/react-dom": "18.2.17",
+    "@types/shelljs": "0.8.15",
+    "cross-env": "7.0.3",
+    "prettier": "2.8.3",
+    "sass": "1.69.5",
+    "shelljs": "0.8.5",
+    "shx": "0.3.4",
+    "typescript": "5.3.2"
+  },
+  "overrides": {
+    "typescript": "5.3.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
