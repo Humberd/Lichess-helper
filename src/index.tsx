@@ -13,7 +13,7 @@ async function onUrlChange() {
   for (const feature of features) {
     if (feature.canExecute(window.location.href)) {
       try {
-        await feature.execute();
+        await feature.execute(window.location.href);
         executedWithSuccess++;
       } catch (e) {
         error(`Feature ${feature.name} failed to execute`);

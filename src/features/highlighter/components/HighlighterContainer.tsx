@@ -4,6 +4,7 @@ import { State } from "../highlight-controller";
 import { PotentialCaptureMark } from "./PotentialCaptureMark";
 import { Orientation } from "../types";
 import { groupBy } from "../../../utils/collections";
+import { PotentialCapturePaths } from "./PotentialCapturePaths";
 
 interface HighlighterContainerProps {
   state: State;
@@ -17,6 +18,10 @@ export const HighlighterContainer: React.FC<HighlighterContainerProps> = (
   const boardSize = props.squareSize * 8;
   const whiteCaptures = groupBy(props.state.whiteCaptures, (move) => move.to);
   const blackCaptures = groupBy(props.state.blackCaptures, (move) => move.to);
+  const allCaptureMoves = [
+    ...props.state.blackCaptures,
+    ...props.state.whiteCaptures,
+  ];
   return (
     <section
       style={{
@@ -25,6 +30,10 @@ export const HighlighterContainer: React.FC<HighlighterContainerProps> = (
       }}
       className={styles.board}
     >
+      <PotentialCapturePaths
+        moves={allCaptureMoves}
+        orientation={props.orientation}
+      />
       {Object.entries(whiteCaptures).map(([to, moves]) => (
         <PotentialCaptureMark
           to={to as any}

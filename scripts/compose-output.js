@@ -11,7 +11,6 @@ async function main() {
     path.resolve(__dirname, "../build/static/js/main.js"),
     "utf8"
   );
-  // language=JavaScript
   const mainWrappedScript = main.trim();
   const buffer = header + mainWrappedScript;
   shx.mkdir("-p", "../dist");

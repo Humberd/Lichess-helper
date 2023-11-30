@@ -1,5 +1,4 @@
 import React from "react";
-// @ts-ignore
 import styles from "./PotentialCaptureMarkCounter.module.scss";
 import classNames from 'classnames';
 

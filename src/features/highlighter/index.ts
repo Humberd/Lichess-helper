@@ -9,10 +9,12 @@ let isExecuted = false;
 export const HighlighterFeature = createFeature({
   name: "highlighter",
   description: "Highlighter",
-  canExecute: (url) => url.includes("/analysis") && !isExecuted,
-  execute: async () => {
+  canExecute: (url) => document.querySelector(".cg-wrap")!! && !isExecuted,
+  execute: async (url) => {
     isExecuted = true;
-    await propagateTestPgn();
+    if(url.includes("/analysis")) {
+      await propagateTestPgn();
+    }
 
     const highlightController = HighlightController.create(
       document.querySelector(".cg-wrap")
@@ -57,7 +59,7 @@ function watchForMovesChange(highlightController: HighlightController) {
     highlightController.tryRepaint();
   };
   callback();
-  const observer = new MutationObserver(() => callback);
+  const observer = new MutationObserver(callback);
   observer.observe(movesContainer, { childList: true, subtree: true });
 }
 
@@ -122,7 +124,7 @@ function watchForChessBoardOrientationChange(
     highlightController.tryRepaint();
   };
   callback();
-  const observer = new MutationObserver(() => callback);
+  const observer = new MutationObserver(callback);
   observer.observe(parentNode, {
     attributes: true,
     attributeFilter: ["class"],
