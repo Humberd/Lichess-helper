@@ -78,29 +78,37 @@ function getMoves(schema: HTMLElement) {
 }
 
 function watchForChessBoardResize(highlightController: HighlightController) {
-  const container = document.querySelector<HTMLElement>("cg-container");
+  const container = document.querySelector<HTMLElement>(".cg-wrap");
   if (!container) {
-    error("<cg-container> not found");
+    error(".cg-wrap not found");
     return;
   }
 
   const callback = () => {
-    log("<cg-container> resized");
-    const squareSize = container.clientWidth / 8;
-    highlightController.setSquareSize(squareSize);
+    log(".cg-wrap resized");
+    const bounds = container.getBoundingClientRect();
+    const width =
+      (Math.floor((bounds.width * window.devicePixelRatio) / 8) * 8) /
+      window.devicePixelRatio;
+    console.log({width });
+    highlightController.setSquareSize(width / 8);
     highlightController.tryRepaint();
   };
   callback();
-  window.addEventListener("resize", callback);
+  // observer resize  of a parentNode
+  const observer = new ResizeObserver(callback);
+  observer.observe(container);
 }
 
-function watchForChessBoardOrientationChange(highlightController: HighlightController) {
+function watchForChessBoardOrientationChange(
+  highlightController: HighlightController
+) {
   const container = document.querySelector<HTMLElement>("cg-container");
   if (!container) {
     error("<cg-container> not found");
     return;
   }
-  const parentNode = container.parentNode as HTMLElement | null
+  const parentNode = container.parentNode as HTMLElement | null;
   // observer mutations of a parentNode
   if (!parentNode) {
     error("<cg-container> has no parentNode");
@@ -108,13 +116,17 @@ function watchForChessBoardOrientationChange(highlightController: HighlightContr
   }
   const callback = () => {
     log("<cg-container> mutated");
-    highlightController.setOrientation(parentNode.classList.contains("orientation-black") ? "black" : "white");
+    highlightController.setOrientation(
+      parentNode.classList.contains("orientation-black") ? "black" : "white"
+    );
     highlightController.tryRepaint();
   };
   callback();
   const observer = new MutationObserver(() => callback);
-  observer.observe(parentNode, {attributes: true, attributeFilter: ["class"]});
-
+  observer.observe(parentNode, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
 }
 
 // language=HTML

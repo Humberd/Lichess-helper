@@ -64,7 +64,6 @@ export class HighlightController {
     log("tryCreateReactComponent");
     if (!this.root) {
       const reactContainer = document.createElement("div");
-      reactContainer.id = "DUPAA";
       this.rootElement.appendChild(reactContainer);
       this.root = createRoot(reactContainer);
     }
