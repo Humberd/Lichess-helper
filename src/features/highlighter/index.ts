@@ -2,7 +2,7 @@ import { createFeature } from "../../utils/feature";
 import { error, log } from "../../utils/utils";
 import { HighlightController } from "./highlight-controller";
 
-const testPGN = `1. d4 d5 2. e4 e5 3. f4 f5 4. g4 Nf6 5. Ne2 Kd7 6. b4 c5 7. bxc5 Kc6 8. Ba3 Qd6 9. Bg2 Rg8 10. O-O Nxg4 11. Ng3 Qh6 12. Nxf5 g6 13. exd5+ Kb5 14. Qd3+ Ka5 15. Qc3+ Kb5 16. Nd6+ Bxd6 17. cxd6 Nc6 18. Qc5+ Ka6 19. Nc3 Nxd4 20. d7 Bxd7 21. Qd6+ Ka5 22. Qc7+ Ka6 23. Qxd7 Rad8 24. Qxg4 exf4`;
+const testPGN = `1. d4 d5 2. e4 e5 3. f4 f5 4. g4 Nf6 5. Ne2 Kd7 6. b4 c5 7. bxc5 Kc6 8. Ba3 Qd6 9. Bg2 Rg8 10. O-O Nxg4 11. Ng3 Qh6 12. Nxf5 g6 13. exd5+ Kb5 14. Qd3+ Ka5 15. Qc3+ Kb5 16. Nd6+ Bxd6 17. cxd6 Nc6 18. Qc5+ Ka6 19. Nc3 Nxd4 20. d7 Bxd7 21. Qd6+ Ka5 22. Qc7+ Ka6 23. Qxd7 Rad8 24. Qxg4 exf4 25. h3 f3 26. Bc5 b6 27. a4 Rge8 28. a5 Rc8 29. Rab1 Red8`;
 
 let isExecuted = false;
 
