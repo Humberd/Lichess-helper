@@ -1,10 +1,11 @@
 import "./index.css";
 import { addLocationChangeCallback, error, log } from "./utils/utils";
 import { Feature } from './utils/feature';
+import { HighlighterFeature } from './features/highlighter';
 
 log("React script has successfully started");
 
-const features: Feature[] = [];
+const features: Feature[] = [HighlighterFeature];
 
 async function onUrlChange() {
   log(`Testing ${features.length} features`);
