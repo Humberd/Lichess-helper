@@ -41,14 +41,18 @@ export const PotentialCapturePath: React.FC<PotentialCapturePathProps> = (
   const newX = fromX + xDiff;
   const newY = fromY + yDiff;
 
+  const ourCapture =
+      props.orientation === "white"
+          ? props.move.color === "w"
+          : props.move.color === "b";
 
   return (
     <g>
       <line
-        stroke="#15781B"
-        strokeWidth="0.15625"
+        stroke={ourCapture ? "#15781B": "#8f2222"}
+        strokeWidth="0.08"
         strokeLinecap="round"
-        markerEnd="url(#script-arrowhead)"
+        markerEnd={`url(#${ourCapture ? "script-arrowhead-our" : "script-arrowhead-their"})`}
         opacity="0.5"
         x1={fromX}
         y1={fromY}

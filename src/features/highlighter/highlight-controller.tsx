@@ -52,6 +52,11 @@ export class HighlightController {
   }
 
   tryRepaint() {
+    log("tryRepaint",{
+      state: this.state,
+      squareSize: this.squareSize,
+      orientation: this.orientation,
+    });
     if (!this.state || !this.squareSize || !this.orientation) {
       return;
     }

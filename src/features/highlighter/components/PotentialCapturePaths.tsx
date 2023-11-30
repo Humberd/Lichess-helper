@@ -23,7 +23,7 @@ export const PotentialCapturePaths: React.FC<PotentialCapturePathsProps> = (
           <feGaussianBlur stdDeviation="0.019"></feGaussianBlur>
         </filter>
         <marker
-          id="script-arrowhead"
+          id="script-arrowhead-our"
           orient="auto"
           overflow="visible"
           markerWidth="4"
@@ -32,6 +32,17 @@ export const PotentialCapturePaths: React.FC<PotentialCapturePathsProps> = (
           refY="2"
         >
           <path d="M0,0 V4 L3,2 Z" fill="#15781B"></path>
+        </marker>
+        <marker
+            id="script-arrowhead-their"
+            orient="auto"
+            overflow="visible"
+            markerWidth="4"
+            markerHeight="4"
+            refX="2.05"
+            refY="2"
+        >
+          <path d="M0,0 V4 L3,2 Z" fill="#8f2222"></path>
         </marker>
       </defs>
       <g>
