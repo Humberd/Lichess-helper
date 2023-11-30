@@ -1,4 +1,4 @@
-import { Chess } from "chess.js";
+import { Chess, Square } from 'chess.js';
 import { Orientation } from './types';
 
 export function getChessLegalMovesFor(fen: string, color: "w" | "b") {
@@ -14,7 +14,7 @@ function setColor(fen: string, color: "w" | "b") {
 }
 
 export function getSquareCoordinates(
-  square: string,
+  square: Square,
   squareSize: number,
   orientation: Orientation
 ) {

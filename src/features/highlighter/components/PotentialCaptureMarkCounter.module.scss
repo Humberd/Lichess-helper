@@ -1,0 +1,24 @@
+.container {
+    position: absolute;
+    top: 8%;
+    right: 8%;
+    width: 28%;
+    height: 28%;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.ourCapture {
+        background-color: rgba(15, 66, 15);
+    }
+    &.theirCapture {
+        background-color: rgba(91, 24, 24);
+    }
+
+}
+
+.text {
+    color: #ffffff;
+}

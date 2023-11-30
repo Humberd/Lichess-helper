@@ -1,3 +1,22 @@
 .potentialCaptureMark {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.ourCapture {
+        --color: rgba(15, 66, 15, 0.47);
+    }
+
+    &.theirCapture {
+        --color: rgba(91, 24, 24, 0.47);
+    }
+}
+
+.circle {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: var(--color);
 }
