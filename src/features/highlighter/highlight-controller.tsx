@@ -1,8 +1,9 @@
 import { log } from "../../utils/utils";
 import { Chess, Move } from "chess.js";
 import { getChessLegalMovesFor } from "./chess-utils";
-import { createRoot } from "react-dom/client";
+import { createRoot, Root } from "react-dom/client";
 import { HighlighterContainer } from "./components/HighlighterContainer";
+import { Orientation } from "./types";
 
 export interface State {
   whiteLegalMoves: Move[];
@@ -14,7 +15,8 @@ export interface State {
 export class HighlightController {
   private state?: State;
   private squareSize?: number;
-  private jsx?: React.JSX.Element;
+  private orientation?: Orientation;
+  private root?: Root;
 
   static create(rootElement: HTMLElement | null) {
     if (!rootElement) {
@@ -45,8 +47,12 @@ export class HighlightController {
     this.squareSize = squareSize;
   }
 
+  setOrientation(orientation: Orientation) {
+    this.orientation = orientation;
+  }
+
   tryRepaint() {
-    if (!this.state || !this.squareSize) {
+    if (!this.state || !this.squareSize || !this.orientation) {
       return;
     }
     this.tryCreateReactComponent();
@@ -56,13 +62,20 @@ export class HighlightController {
 
   private tryCreateReactComponent() {
     log("tryCreateReactComponent");
-    const reactContainer = document.createElement("div");
-    reactContainer.id = "DUPAA";
-    console.log(this.rootElement);
-    this.rootElement.appendChild(reactContainer);
-    const root = createRoot(reactContainer);
-    this.jsx = <HighlighterContainer state={this.state!} squareSize={this.squareSize!} />;
-    root.render(this.jsx);
+    if (!this.root) {
+      const reactContainer = document.createElement("div");
+      reactContainer.id = "DUPAA";
+      this.rootElement.appendChild(reactContainer);
+      this.root = createRoot(reactContainer);
+    }
+
+    this.root.render(
+      <HighlighterContainer
+        state={this.state!}
+        squareSize={this.squareSize!}
+        orientation={this.orientation!}
+      />
+    );
   }
 
   private repaint() {}

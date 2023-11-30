@@ -1,4 +1,5 @@
 import { Chess } from "chess.js";
+import { Orientation } from './types';
 
 export function getChessLegalMovesFor(fen: string, color: "w" | "b") {
   const swappedFen = setColor(fen, color);
@@ -15,7 +16,7 @@ function setColor(fen: string, color: "w" | "b") {
 export function getSquareCoordinates(
   square: string,
   squareSize: number,
-  orientation: "white" | "black"
+  orientation: Orientation
 ) {
   const parts = square.split("");
   const file = parts[0];

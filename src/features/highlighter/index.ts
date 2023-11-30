@@ -15,10 +15,11 @@ export const HighlighterFeature = createFeature({
     await propagateTestPgn();
 
     const highlightController = HighlightController.create(
-      document.querySelector("cg-container")
+      document.querySelector(".cg-wrap")
     );
     watchForMovesChange(highlightController);
     watchForChessBoardResize(highlightController);
+    watchForChessBoardOrientationChange(highlightController);
   },
 });
 
@@ -91,6 +92,29 @@ function watchForChessBoardResize(highlightController: HighlightController) {
   };
   callback();
   window.addEventListener("resize", callback);
+}
+
+function watchForChessBoardOrientationChange(highlightController: HighlightController) {
+  const container = document.querySelector<HTMLElement>("cg-container");
+  if (!container) {
+    error("<cg-container> not found");
+    return;
+  }
+  const parentNode = container.parentNode as HTMLElement | null
+  // observer mutations of a parentNode
+  if (!parentNode) {
+    error("<cg-container> has no parentNode");
+    return;
+  }
+  const callback = () => {
+    log("<cg-container> mutated");
+    highlightController.setOrientation(parentNode.classList.contains("orientation-black") ? "black" : "white");
+    highlightController.tryRepaint();
+  };
+  callback();
+  const observer = new MutationObserver(() => callback);
+  observer.observe(parentNode, {attributes: true, attributeFilter: ["class"]});
+
 }
 
 // language=HTML
