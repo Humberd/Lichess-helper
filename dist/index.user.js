@@ -7,12 +7,70 @@
 // @grant		  none
 // ==/UserScript==
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ 694:
+/***/ ((module, exports) => {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+  'use strict';
+
+  var hasOwn = {}.hasOwnProperty;
+  var nativeCodeString = '[native code]';
+  function classNames() {
+    var classes = [];
+    for (var i = 0; i < arguments.length; i++) {
+      var arg = arguments[i];
+      if (!arg) continue;
+      var argType = typeof arg;
+      if (argType === 'string' || argType === 'number') {
+        classes.push(arg);
+      } else if (Array.isArray(arg)) {
+        if (arg.length) {
+          var inner = classNames.apply(null, arg);
+          if (inner) {
+            classes.push(inner);
+          }
+        }
+      } else if (argType === 'object') {
+        if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+          classes.push(arg.toString());
+          continue;
+        }
+        for (var key in arg) {
+          if (hasOwn.call(arg, key) && arg[key]) {
+            classes.push(key);
+          }
+        }
+      }
+    }
+    return classes.join(' ');
+  }
+  if ( true && module.exports) {
+    classNames.default = classNames;
+    module.exports = classNames;
+  } else if (true) {
+    // register as 'classnames', consistent with npm package name
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+      return classNames;
+    }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else {}
+})();
+
+/***/ }),
 
 /***/ 176:
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -104,6 +162,7 @@ module.exports = function (cssWithMappingToString) {
 /***/ 657:
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -126,6 +185,7 @@ module.exports = function (item) {
 /***/ 463:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 /**
  * @license React
  * react-dom.production.min.js
@@ -7270,6 +7330,7 @@ exports.version = "18.2.0-next-9e3b772b8-20220608";
 /***/ 250:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 var __webpack_unused_export__;
 
 
@@ -7284,6 +7345,7 @@ if (true) {
 /***/ 164:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 function checkDCE() {
@@ -7313,6 +7375,7 @@ if (true) {
 /***/ 374:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 var __webpack_unused_export__;
 /**
  * @license React
@@ -7357,13 +7420,14 @@ function q(c, a, g) {
 }
 __webpack_unused_export__ = l;
 exports.jsx = q;
-__webpack_unused_export__ = q;
+exports.jsxs = q;
 
 /***/ }),
 
 /***/ 117:
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 /**
  * @license React
  * react.production.min.js
@@ -7720,6 +7784,7 @@ exports.version = "18.2.0";
 /***/ 791:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (true) {
@@ -7731,6 +7796,7 @@ if (true) {
 /***/ 184:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (true) {
@@ -7742,6 +7808,7 @@ if (true) {
 /***/ 813:
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 /**
  * @license React
  * scheduler.production.min.js
@@ -8004,6 +8071,7 @@ exports.unstable_wrapCallback = function (a) {
 /***/ 296:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (true) {
@@ -8015,6 +8083,7 @@ if (true) {
 /***/ 880:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -8035,9 +8104,120 @@ ___CSS_LOADER_EXPORT___.locals = {};
 
 /***/ }),
 
+/***/ 421:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(657);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(176);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.HighlighterContainer_board__jZ7KM{pointer-events:none;position:absolute;top:0;right:0;z-index:1000}`, "",{"version":3,"sources":["webpack://./src/features/highlighter/components/HighlighterContainer.module.scss"],"names":[],"mappings":"AAAA,mCACE,mBAAA,CACA,iBAAA,CACA,KAAA,CACA,OAAA,CACA,YAAA","sourcesContent":[".board {\n  pointer-events: none;\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 1000;\n}\n"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"board": `HighlighterContainer_board__jZ7KM`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 404:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(657);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(176);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.PotentialCaptureMark_potentialCaptureMark__oJ7W5{position:absolute;display:flex;align-items:center;justify-content:center}.PotentialCaptureMark_potentialCaptureMark__oJ7W5.PotentialCaptureMark_ourCapture__FStBG{--color: rgba(15, 66, 15, 0.47)}.PotentialCaptureMark_potentialCaptureMark__oJ7W5.PotentialCaptureMark_theirCapture__DKs\\+-{--color: rgba(91, 24, 24, 0.47)}.PotentialCaptureMark_circle__bekOP{position:absolute;width:80%;height:80%;border-radius:50%;background-color:var(--color)}`, "",{"version":3,"sources":["webpack://./src/features/highlighter/components/PotentialCaptureMark.module.scss"],"names":[],"mappings":"AAAA,kDACI,iBAAA,CACA,YAAA,CACA,kBAAA,CACA,sBAAA,CAEA,yFACI,+BAAA,CAGJ,4FACI,+BAAA,CAIR,oCACI,iBAAA,CACA,SAAA,CACA,UAAA,CACA,iBAAA,CACA,6BAAA","sourcesContent":[".potentialCaptureMark {\n    position: absolute;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n\n    &.ourCapture {\n        --color: rgba(15, 66, 15, 0.47);\n    }\n\n    &.theirCapture {\n        --color: rgba(91, 24, 24, 0.47);\n    }\n}\n\n.circle {\n    position: absolute;\n    width: 80%;\n    height: 80%;\n    border-radius: 50%;\n    background-color: var(--color);\n}\n"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"potentialCaptureMark": `PotentialCaptureMark_potentialCaptureMark__oJ7W5`,
+	"ourCapture": `PotentialCaptureMark_ourCapture__FStBG`,
+	"theirCapture": `PotentialCaptureMark_theirCapture__DKs+-`,
+	"circle": `PotentialCaptureMark_circle__bekOP`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 325:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(657);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(176);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.PotentialCaptureMarkCounter_container__DR\\+ao{position:absolute;top:8%;right:8%;width:28%;height:28%;border-radius:50%;border:1px solid #000;display:flex;align-items:center;justify-content:center}.PotentialCaptureMarkCounter_container__DR\\+ao.PotentialCaptureMarkCounter_ourCapture__TX\\+PF{background-color:#0f420f}.PotentialCaptureMarkCounter_container__DR\\+ao.PotentialCaptureMarkCounter_theirCapture__ZDW5K{background-color:#5b1818}.PotentialCaptureMarkCounter_text__R0Geb{color:#fff}`, "",{"version":3,"sources":["webpack://./src/features/highlighter/components/PotentialCaptureMarkCounter.module.scss"],"names":[],"mappings":"AAAA,+CACI,iBAAA,CACA,MAAA,CACA,QAAA,CACA,SAAA,CACA,UAAA,CACA,iBAAA,CACA,qBAAA,CACA,YAAA,CACA,kBAAA,CACA,sBAAA,CAEA,8FACI,wBAAA,CAEJ,+FACI,wBAAA,CAKR,yCACI,UAAA","sourcesContent":[".container {\n    position: absolute;\n    top: 8%;\n    right: 8%;\n    width: 28%;\n    height: 28%;\n    border-radius: 50%;\n    border: 1px solid black;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n\n    &.ourCapture {\n        background-color: rgba(15, 66, 15);\n    }\n    &.theirCapture {\n        background-color: rgba(91, 24, 24);\n    }\n\n}\n\n.text {\n    color: #ffffff;\n}\n"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"container": `PotentialCaptureMarkCounter_container__DR+ao`,
+	"ourCapture": `PotentialCaptureMarkCounter_ourCapture__TX+PF`,
+	"theirCapture": `PotentialCaptureMarkCounter_theirCapture__ZDW5K`,
+	"text": `PotentialCaptureMarkCounter_text__R0Geb`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 240:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(657);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(176);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `svg.PotentialCapturePaths_svg__CUox6{position:absolute}`, "",{"version":3,"sources":["webpack://./src/features/highlighter/components/PotentialCapturePaths.module.scss"],"names":[],"mappings":"AAAA,qCACE,iBAAA","sourcesContent":["svg.svg {\n  position: absolute;\n}\n"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"svg": `PotentialCapturePaths_svg__CUox6`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ 701:
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -8128,6 +8308,7 @@ module.exports = function (list, options) {
 /***/ 80:
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -8168,6 +8349,7 @@ module.exports = insertBySelector;
 /***/ 182:
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -8184,6 +8366,7 @@ module.exports = insertStyleElement;
 /***/ 850:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -8200,6 +8383,7 @@ module.exports = setAttributesWithoutAttributes;
 /***/ 236:
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -8267,6 +8451,7 @@ module.exports = domAPI;
 /***/ 213:
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -8347,8 +8532,9 @@ module.exports = styleTagTransform;
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(701);
@@ -8420,7 +8606,7 @@ let oldHref=window.location.href;const body=document.querySelector("body");const
  * This is used to delay rendering a widget until its parent appears.
  */async function awaitElement(selector){const MAX_TRIES=60;let tries=0;return new Promise((resolve,reject)=>{function probe(){tries++;return document.querySelector(selector);}function delayedProbe(){if(tries>=MAX_TRIES){log("Can't find element with selector",selector);reject();return;}const elm=probe();if(elm){resolve(elm);return;}window.setTimeout(delayedProbe,250);}delayedProbe();});}
 ;// CONCATENATED MODULE: ./src/utils/feature.ts
-function createFeature(feature){return{...feature,execute:async()=>applyExecuteTimeSpent(feature.name,feature.execute)};}const applyExecuteTimeSpent=async(name,callback)=>{const start=Date.now();await callback();const end=Date.now();log("Time spent executing ".concat(name,": ").concat(end-start,"ms"));};
+function createFeature(feature){return{...feature,execute:async url=>applyExecuteTimeSpent(feature.name,feature.execute,url)};}const applyExecuteTimeSpent=async(name,callback,url)=>{const start=Date.now();await callback(url);const end=Date.now();log("Time spent executing ".concat(name,": ").concat(end-start,"ms"));};
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
 function _typeof(o) {
   "@babel/helpers - typeof";
@@ -10368,24 +10554,164 @@ class Chess {
   }
 }
 ;// CONCATENATED MODULE: ./src/features/highlighter/chess-utils.ts
-function getChessLegalMovesFor(fen,color){const swappedFen=setColor(fen,color);const chess=new Chess(swappedFen);return chess.moves({verbose:true});}function setColor(fen,color){const parts=fen.split(' ');parts[1]=color;return parts.join(' ');}function getSquareCoordinates(square,squareSize){const parts=square.split('');const file=parts[0];const rank=parts[1];return{x:getX(file,squareSize),y:getY(rank,squareSize)};}function getX(file,squareSize){// must be relative to the size of the board
-const fileIndex='abcdefgh'.indexOf(file);return fileIndex*squareSize;}function getY(rank,squareSize){// must be relative to the size of the board
-const rankIndex='12345678'.indexOf(rank);return rankIndex*squareSize;}
+function getChessLegalMovesFor(fen,color){const swappedFen=setColor(fen,color);const chess=new Chess(swappedFen);return chess.moves({verbose:true});}function setColor(fen,color){const parts=fen.split(" ");parts[1]=color;return parts.join(" ");}function getSquareCoordinates(square,squareSize,orientation){const parts=square.split("");const file=parts[0];const rank=parts[1];return{x:getX(file,squareSize,orientation),y:getY(rank,squareSize,orientation)};}function getX(file,squareSize,orientation){const fileIndex="abcdefgh".indexOf(file);return orientation==="white"?fileIndex*squareSize:(7-fileIndex)*squareSize;}function getY(rank,squareSize,orientation){const rankIndex="12345678".indexOf(rank);return orientation==="white"?(7-rankIndex)*squareSize:rankIndex*squareSize;}
 // EXTERNAL MODULE: ./node_modules/react-dom/client.js
 var client = __webpack_require__(250);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/features/highlighter/components/HighlighterContainer.module.scss
+var HighlighterContainer_module = __webpack_require__(421);
+;// CONCATENATED MODULE: ./src/features/highlighter/components/HighlighterContainer.module.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var HighlighterContainer_module_options = {};
+
+HighlighterContainer_module_options.styleTagTransform = (styleTagTransform_default());
+HighlighterContainer_module_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      HighlighterContainer_module_options.insert = insertBySelector_default().bind(null, "head");
+    
+HighlighterContainer_module_options.domAPI = (styleDomAPI_default());
+HighlighterContainer_module_options.insertStyleElement = (insertStyleElement_default());
+
+var HighlighterContainer_module_update = injectStylesIntoStyleTag_default()(HighlighterContainer_module/* default */.Z, HighlighterContainer_module_options);
+
+
+
+
+       /* harmony default export */ const components_HighlighterContainer_module = (HighlighterContainer_module/* default */.Z && HighlighterContainer_module/* default */.Z.locals ? HighlighterContainer_module/* default */.Z.locals : undefined);
+
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(791);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/features/highlighter/components/PotentialCaptureMark.module.scss
+var PotentialCaptureMark_module = __webpack_require__(404);
+;// CONCATENATED MODULE: ./src/features/highlighter/components/PotentialCaptureMark.module.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var PotentialCaptureMark_module_options = {};
+
+PotentialCaptureMark_module_options.styleTagTransform = (styleTagTransform_default());
+PotentialCaptureMark_module_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      PotentialCaptureMark_module_options.insert = insertBySelector_default().bind(null, "head");
+    
+PotentialCaptureMark_module_options.domAPI = (styleDomAPI_default());
+PotentialCaptureMark_module_options.insertStyleElement = (insertStyleElement_default());
+
+var PotentialCaptureMark_module_update = injectStylesIntoStyleTag_default()(PotentialCaptureMark_module/* default */.Z, PotentialCaptureMark_module_options);
+
+
+
+
+       /* harmony default export */ const components_PotentialCaptureMark_module = (PotentialCaptureMark_module/* default */.Z && PotentialCaptureMark_module/* default */.Z.locals ? PotentialCaptureMark_module/* default */.Z.locals : undefined);
+
+// EXTERNAL MODULE: ./node_modules/classnames/index.js
+var classnames = __webpack_require__(694);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/features/highlighter/components/PotentialCaptureMarkCounter.module.scss
+var PotentialCaptureMarkCounter_module = __webpack_require__(325);
+;// CONCATENATED MODULE: ./src/features/highlighter/components/PotentialCaptureMarkCounter.module.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var PotentialCaptureMarkCounter_module_options = {};
+
+PotentialCaptureMarkCounter_module_options.styleTagTransform = (styleTagTransform_default());
+PotentialCaptureMarkCounter_module_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      PotentialCaptureMarkCounter_module_options.insert = insertBySelector_default().bind(null, "head");
+    
+PotentialCaptureMarkCounter_module_options.domAPI = (styleDomAPI_default());
+PotentialCaptureMarkCounter_module_options.insertStyleElement = (insertStyleElement_default());
+
+var PotentialCaptureMarkCounter_module_update = injectStylesIntoStyleTag_default()(PotentialCaptureMarkCounter_module/* default */.Z, PotentialCaptureMarkCounter_module_options);
+
+
+
+
+       /* harmony default export */ const components_PotentialCaptureMarkCounter_module = (PotentialCaptureMarkCounter_module/* default */.Z && PotentialCaptureMarkCounter_module/* default */.Z.locals ? PotentialCaptureMarkCounter_module/* default */.Z.locals : undefined);
+
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(184);
+;// CONCATENATED MODULE: ./src/features/highlighter/components/PotentialCaptureMarkCounter.tsx
+const PotentialCaptureMarkCounter=props=>{return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:classnames_default()(components_PotentialCaptureMarkCounter_module.container,{[components_PotentialCaptureMarkCounter_module.ourCapture]:props.isOurCapture,[components_PotentialCaptureMarkCounter_module.theirCapture]:!props.isOurCapture}),children:/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:components_PotentialCaptureMarkCounter_module.text,children:props.count})});};
+;// CONCATENATED MODULE: ./src/features/highlighter/components/PotentialCaptureMark.tsx
+const PotentialCaptureMark=props=>{const coordinates=getSquareCoordinates(props.to,props.squareSize,props.orientation);const transform="translate(".concat(coordinates.x,"px, ").concat(coordinates.y,"px)");const ourCapture=props.orientation==="white"?props.moves[0].color==="w":props.moves[0].color==="b";const theirCapture=props.orientation==="white"?props.moves[0].color==="b":props.moves[0].color==="w";return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{"data-square":props.to,style:{transform,width:props.squareSize,height:props.squareSize},className:classnames_default()(components_PotentialCaptureMark_module.potentialCaptureMark,{[components_PotentialCaptureMark_module.ourCapture]:ourCapture,[components_PotentialCaptureMark_module.theirCapture]:theirCapture}),children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:components_PotentialCaptureMark_module.circle}),props.moves.length>1&&/*#__PURE__*/(0,jsx_runtime.jsx)(PotentialCaptureMarkCounter,{count:props.moves.length,isOurCapture:ourCapture})]});};
+;// CONCATENATED MODULE: ./src/utils/collections.ts
+function groupBy(list,getKey){return list.reduce((previous,currentItem)=>{const group=getKey(currentItem);if(!previous[group])previous[group]=[];previous[group].push(currentItem);return previous;},{});}
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/features/highlighter/components/PotentialCapturePaths.module.scss
+var PotentialCapturePaths_module = __webpack_require__(240);
+;// CONCATENATED MODULE: ./src/features/highlighter/components/PotentialCapturePaths.module.scss
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var PotentialCapturePaths_module_options = {};
+
+PotentialCapturePaths_module_options.styleTagTransform = (styleTagTransform_default());
+PotentialCapturePaths_module_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      PotentialCapturePaths_module_options.insert = insertBySelector_default().bind(null, "head");
+    
+PotentialCapturePaths_module_options.domAPI = (styleDomAPI_default());
+PotentialCapturePaths_module_options.insertStyleElement = (insertStyleElement_default());
+
+var PotentialCapturePaths_module_update = injectStylesIntoStyleTag_default()(PotentialCapturePaths_module/* default */.Z, PotentialCapturePaths_module_options);
+
+
+
+
+       /* harmony default export */ const components_PotentialCapturePaths_module = (PotentialCapturePaths_module/* default */.Z && PotentialCapturePaths_module/* default */.Z.locals ? PotentialCapturePaths_module/* default */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./src/features/highlighter/components/PotentialCapturePath.tsx
+const PotentialCapturePath=props=>{// we want only a coordinate, not a pixel position on the screen
+const squareSize=1;const offset=0.5;const fromCoordinates=getSquareCoordinates(props.move.from,squareSize,props.orientation);const fromX=fromCoordinates.x+offset;const fromY=fromCoordinates.y+offset;const toCoordinates=getSquareCoordinates(props.move.to,squareSize,props.orientation);const toX=toCoordinates.x+offset;const toY=toCoordinates.y+offset;// shorten the line by 1/3 of the square size
+const dx=toX-fromX;const dy=toY-fromY;const length=Math.sqrt(dx*dx+dy*dy);const shortenBy=squareSize/3;const newLength=length-shortenBy;const ratio=newLength/length;const xDiff=dx*ratio;const yDiff=dy*ratio;const newX=fromX+xDiff;const newY=fromY+yDiff;const ourCapture=props.orientation==="white"?props.move.color==="w":props.move.color==="b";return/*#__PURE__*/(0,jsx_runtime.jsx)("g",{children:/*#__PURE__*/(0,jsx_runtime.jsx)("line",{stroke:ourCapture?"#15781B":"#8f2222",strokeWidth:"0.08",strokeLinecap:"round",markerEnd:"url(#".concat(ourCapture?"script-arrowhead-our":"script-arrowhead-their",")"),opacity:"0.5",x1:fromX,y1:fromY,x2:newX,y2:newY})});};
+;// CONCATENATED MODULE: ./src/features/highlighter/components/PotentialCapturePaths.tsx
+const PotentialCapturePaths=props=>{return/*#__PURE__*/(0,jsx_runtime.jsxs)("svg",{className:components_PotentialCapturePaths_module.svg,viewBox:"0 0 8 8",preserveAspectRatio:"xMidYMid slice",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("defs",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("filter",{id:"script-filter-blur",children:/*#__PURE__*/(0,jsx_runtime.jsx)("feGaussianBlur",{stdDeviation:"0.019"})}),/*#__PURE__*/(0,jsx_runtime.jsx)("marker",{id:"script-arrowhead-our",orient:"auto",overflow:"visible",markerWidth:"4",markerHeight:"4",refX:"2.05",refY:"2",children:/*#__PURE__*/(0,jsx_runtime.jsx)("path",{d:"M0,0 V4 L3,2 Z",fill:"#15781B"})}),/*#__PURE__*/(0,jsx_runtime.jsx)("marker",{id:"script-arrowhead-their",orient:"auto",overflow:"visible",markerWidth:"4",markerHeight:"4",refX:"2.05",refY:"2",children:/*#__PURE__*/(0,jsx_runtime.jsx)("path",{d:"M0,0 V4 L3,2 Z",fill:"#8f2222"})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)("g",{children:props.moves.map(move=>/*#__PURE__*/(0,jsx_runtime.jsx)(PotentialCapturePath,{move:move,orientation:props.orientation}))})]});};
 ;// CONCATENATED MODULE: ./src/features/highlighter/components/HighlighterContainer.tsx
-const HighlighterContainer=props=>{return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:"dupa"});};
+const HighlighterContainer=props=>{const boardSize=props.squareSize*8;const whiteCaptures=groupBy(props.state.whiteCaptures,move=>move.to);const blackCaptures=groupBy(props.state.blackCaptures,move=>move.to);const allCaptureMoves=[...props.state.blackCaptures,...props.state.whiteCaptures];return/*#__PURE__*/(0,jsx_runtime.jsxs)("section",{style:{width:boardSize,height:boardSize},className:components_HighlighterContainer_module.board,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(PotentialCapturePaths,{moves:allCaptureMoves,orientation:props.orientation}),Object.entries(whiteCaptures).map(_ref=>{let[to,moves]=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)(PotentialCaptureMark,{to:to,moves:moves,squareSize:props.squareSize,orientation:props.orientation});}),Object.entries(blackCaptures).map(_ref2=>{let[to,moves]=_ref2;return/*#__PURE__*/(0,jsx_runtime.jsx)(PotentialCaptureMark,{to:to,moves:moves,squareSize:props.squareSize,orientation:props.orientation});})]});};
 ;// CONCATENATED MODULE: ./src/features/highlighter/highlight-controller.tsx
-class HighlightController{static create(rootElement){if(!rootElement){throw Error("rootElement is undefined");}return new HighlightController(rootElement);}constructor(rootElement){this.rootElement=rootElement;this.state=void 0;this.squareSize=void 0;this.jsx=void 0;}recalculateLegalMoves(allMovesSinceStart){log("recalculateLegalMoves for board state",allMovesSinceStart);const chess=new Chess();allMovesSinceStart.forEach(move=>{chess.move(move);});const whiteLegalMoves=getChessLegalMovesFor(chess.fen(),"w");const blackLegalMoves=getChessLegalMovesFor(chess.fen(),"b");this.state={whiteLegalMoves,blackLegalMoves,whiteCaptures:whiteLegalMoves.filter(move=>move.flags.includes("c")),blackCaptures:blackLegalMoves.filter(move=>move.flags.includes("c"))};}setSquareSize(squareSize){this.squareSize=squareSize;}tryRepaint(){if(!this.state||!this.squareSize){return;}this.tryCreateReactComponent();this.repaint();}tryCreateReactComponent(){log("tryCreateReactComponent");const reactContainer=document.createElement("div");reactContainer.id="DUPAA";console.log(this.rootElement);this.rootElement.appendChild(reactContainer);const root=(0,client/* createRoot */.s)(reactContainer);this.jsx=/*#__PURE__*/(0,jsx_runtime.jsx)(HighlighterContainer,{state:this.state,squareSize:this.squareSize});root.render(this.jsx);}repaint(){}}
+class HighlightController{static create(rootElement){if(!rootElement){throw Error("rootElement is undefined");}return new HighlightController(rootElement);}constructor(rootElement){this.rootElement=rootElement;this.state=void 0;this.squareSize=void 0;this.orientation=void 0;this.root=void 0;}recalculateLegalMoves(allMovesSinceStart){log("recalculateLegalMoves for board state",allMovesSinceStart);const chess=new Chess();allMovesSinceStart.forEach(move=>{chess.move(move);});const whiteLegalMoves=getChessLegalMovesFor(chess.fen(),"w");const blackLegalMoves=getChessLegalMovesFor(chess.fen(),"b");this.state={whiteLegalMoves,blackLegalMoves,whiteCaptures:whiteLegalMoves.filter(move=>move.flags.includes("c")),blackCaptures:blackLegalMoves.filter(move=>move.flags.includes("c"))};}setSquareSize(squareSize){this.squareSize=squareSize;}setOrientation(orientation){this.orientation=orientation;}tryRepaint(){log("tryRepaint",{state:this.state,squareSize:this.squareSize,orientation:this.orientation});if(!this.state||!this.squareSize||!this.orientation){return;}this.tryCreateReactComponent();this.repaint();}tryCreateReactComponent(){log("tryCreateReactComponent");if(!this.root){const reactContainer=document.createElement("div");this.rootElement.appendChild(reactContainer);this.root=(0,client/* createRoot */.s)(reactContainer);}this.root.render(/*#__PURE__*/(0,jsx_runtime.jsx)(HighlighterContainer,{state:this.state,squareSize:this.squareSize,orientation:this.orientation}));}repaint(){}}
+;// CONCATENATED MODULE: ./src/utils/time.ts
+async function waitFor(ms){return new Promise(resolve=>setTimeout(resolve,ms));}async function retry(callback,waitTimeMs){let retries=arguments.length>2&&arguments[2]!==undefined?arguments[2]:3;try{return await callback();}catch(error){if(retries===0){throw error;}log("Retrying in ".concat(waitTimeMs,"ms"));await waitFor(waitTimeMs);return await retry(callback,waitTimeMs,retries-1);}}
 ;// CONCATENATED MODULE: ./src/features/highlighter/index.ts
-const testPGN="1. d4 d5 2. e4 e5 3. f4 f5 4. g4 Nf6 5. Ne2 Kd7 6. b4 c5 7. bxc5 Kc6 8. Ba3 Qd6 9. Bg2 Rg8 10. O-O Nxg4 11. Ng3 Qh6 12. Nxf5 g6 13. exd5+ Kb5 14. Qd3+ Ka5 15. Qc3+ Kb5 16. Nd6+ Bxd6 17. cxd6 Nc6 18. Qc5+ Ka6 19. Nc3 Nxd4 20. d7 Bxd7 21. Qd6+ Ka5 22. Qc7+ Ka6 23. Qxd7 Rad8 24. Qxg4 exf4";let isExecuted=false;const HighlighterFeature=createFeature({name:"highlighter",description:"Highlighter",canExecute:url=>url.includes("/analysis")&&!isExecuted,execute:async()=>{isExecuted=true;await propagateTestPgn();const highlightController=HighlightController.create(document.querySelector("cg-container"));watchForMovesChange(highlightController);watchForChessBoardResize(highlightController);}});async function propagateTestPgn(){const pgnTextareaElement=document.querySelector(".pgn textarea");if(!pgnTextareaElement){error("pgn textarea not found");return;}pgnTextareaElement.value=testPGN;pgnTextareaElement.focus();const importPgnButtonElement=document.querySelector(".pgn button");if(!importPgnButtonElement){error("import pgn button not found");return;}importPgnButtonElement.click();}function watchForMovesChange(highlightController){const movesContainer=document.querySelector(".analyse__moves.areplay");if(!movesContainer){error("movesContainer not found");return;}const callback=()=>{log("calculating legal moves");highlightController.recalculateLegalMoves(getMoves(movesContainer));highlightController.tryRepaint();};callback();const observer=new MutationObserver(()=>callback);observer.observe(movesContainer,{childList:true,subtree:true});}function getMoves(schema){const moves=[];const moveNodes=schema.querySelectorAll("move");moveNodes.forEach(moveNode=>{var _moveNode$querySelect;let move=(_moveNode$querySelect=moveNode.querySelector("san"))===null||_moveNode$querySelect===void 0?void 0:_moveNode$querySelect.textContent;if(!move){var _move;move=moveNode.textContent;if((_move=move)!==null&&_move!==void 0&&_move.includes(".")){move=move.split(".")[1];}}moves.push(move);});return moves;}function watchForChessBoardResize(highlightController){const container=document.querySelector("cg-container");if(!container){error("<cg-container> not found");return;}const callback=()=>{log("<cg-container> resized");const squareSize=container.clientWidth/8;highlightController.setSquareSize(squareSize);highlightController.tryRepaint();};callback();window.addEventListener("resize",callback);}// language=HTML
-const chessBoard="\n  '\n  <cg-container style=\"width: 646.4px; height: 646.4px;\">\n    <cg-board>\n      <square class=\"last-move\" style=\"transform: translate(404px, 323.2px);\"></square>\n      <square class=\"last-move\" style=\"transform: translate(323.2px, 242.4px);\"></square>\n      <piece class=\"black rook\" style=\"transform: translate(242.4px);\"></piece>\n      <piece class=\"black rook\" style=\"transform: translate(484.8px);\"></piece>\n      <piece class=\"black pawn\" style=\"transform: translate(0px, 80.8px);\"></piece>\n      <piece class=\"black pawn\" style=\"transform: translate(80.8px, 80.8px);\"></piece>\n      <piece class=\"black pawn\" style=\"transform: translate(565.6px, 80.8px);\"></piece>\n      <piece class=\"black king\" style=\"transform: translate(0px, 161.6px);\"></piece>\n      <piece class=\"black pawn\" style=\"transform: translate(484.8px, 161.6px);\"></piece>\n      <piece class=\"black queen\" style=\"transform: translate(565.6px, 161.6px);\"></piece>\n      <piece class=\"white pawn\" style=\"transform: translate(242.4px, 242.4px);\"></piece>\n      <piece class=\"black knight\" style=\"transform: translate(242.4px, 323.2px);\"></piece>\n      <piece class=\"black pawn\" style=\"transform: translate(404px, 323.2px);\"></piece>\n      <piece class=\"white queen\" style=\"transform: translate(484.8px, 323.2px);\"></piece>\n      <piece class=\"white bishop\" style=\"transform: translate(0px, 404px);\"></piece>\n      <piece class=\"white knight\" style=\"transform: translate(161.6px, 404px);\"></piece>\n      <piece class=\"white pawn\" style=\"transform: translate(0px, 484.8px);\"></piece>\n      <piece class=\"white pawn\" style=\"transform: translate(161.6px, 484.8px);\"></piece>\n      <piece class=\"white bishop\" style=\"transform: translate(484.8px, 484.8px);\"></piece>\n      <piece class=\"white pawn\" style=\"transform: translate(565.6px, 484.8px);\"></piece>\n      <piece class=\"white rook\" style=\"transform: translate(0px, 565.6px);\"></piece>\n      <piece class=\"white rook\" style=\"transform: translate(404px, 565.6px);\"></piece>\n      <piece class=\"white king\" style=\"transform: translate(484.8px, 565.6px);\"></piece>\n    </cg-board>\n  </cg-container>'\n";
+const testPGN="1. d4 d5 2. e4 e5 3. f4 f5 4. g4 Nf6 5. Ne2 Kd7 6. b4 c5 7. bxc5 Kc6 8. Ba3 Qd6 9. Bg2 Rg8 10. O-O Nxg4 11. Ng3 Qh6 12. Nxf5 g6 13. exd5+ Kb5 14. Qd3+ Ka5 15. Qc3+ Kb5 16. Nd6+ Bxd6 17. cxd6 Nc6 18. Qc5+ Ka6 19. Nc3 Nxd4 20. d7 Bxd7 21. Qd6+ Ka5 22. Qc7+ Ka6 23. Qxd7 Rad8 24. Qxg4 exf4 25. h3 f3 26. Bc5 b6 27. a4 Rge8 28. a5 Rc8 29. Rab1 Red8 30. h4";let isExecuted=false;const HighlighterFeature=createFeature({name:"highlighter",description:"Highlighter",canExecute:url=>document.querySelector(".cg-wrap")&&!isExecuted,execute:async url=>{isExecuted=true;if(url.includes("/analysis")){await propagateTestPgn();}const highlightController=HighlightController.create(document.querySelector(".cg-wrap"));retry(()=>watchForMovesChange(highlightController),1000,31);watchForChessBoardResize(highlightController);watchForChessBoardOrientationChange(highlightController);}});async function propagateTestPgn(){const pgnTextareaElement=document.querySelector(".pgn textarea");if(!pgnTextareaElement){error("pgn textarea not found");return;}pgnTextareaElement.value=testPGN;pgnTextareaElement.focus();const importPgnButtonElement=document.querySelector(".pgn button");if(!importPgnButtonElement){error("import pgn button not found");return;}importPgnButtonElement.click();}function watchForMovesChange(highlightController){const movesContainerAnalysisMode=document.querySelector(".analyse__moves.areplay");if(movesContainerAnalysisMode){log("watching for moves change in analysis mode");const callback=()=>{log("calculating legal moves");highlightController.recalculateLegalMoves(getMovesAnalysisMode(movesContainerAnalysisMode));highlightController.tryRepaint();};callback();const observer=new MutationObserver(callback);observer.observe(movesContainerAnalysisMode,{attributeFilter:["class"],attributes:true,childList:true,subtree:true});return;}const movesContainerMatchMode=document.querySelector("l4x");if(movesContainerMatchMode){log("watching for moves change in match mode");const callback=()=>{log("calculating legal moves");highlightController.recalculateLegalMoves(getMovesMatchMode(movesContainerMatchMode));highlightController.tryRepaint();};callback();const observer=new MutationObserver(callback);observer.observe(movesContainerMatchMode,{attributeFilter:["class"],attributes:true,childList:true,subtree:true});return;}throw Error("moves container not found");}function getMovesAnalysisMode(schema){const moves=[];const moveNodes=schema.querySelectorAll("move");for(let i=0;i<moveNodes.length;i++){var _moveNode$querySelect;const moveNode=moveNodes[i];let move=(_moveNode$querySelect=moveNode.querySelector("san"))===null||_moveNode$querySelect===void 0?void 0:_moveNode$querySelect.textContent;if(!move){var _move;move=moveNode.textContent;if((_move=move)!==null&&_move!==void 0&&_move.includes(".")){move=move.split(".")[1];}}moves.push(move);if(moveNode.classList.contains("active")){break;}}return moves;}function getMovesMatchMode(schema){const moves=[];const moveNodes=schema.querySelectorAll("kwdb");for(let i=0;i<moveNodes.length;i++){const moveNode=moveNodes[i];const move=moveNode.textContent;moves.push(move);if(moveNode.classList.contains("a1t")){break;}}return moves;}function watchForChessBoardResize(highlightController){const container=document.querySelector(".cg-wrap");if(!container){error(".cg-wrap not found");return;}const callback=()=>{log("resize event triggered");const bounds=container.getBoundingClientRect();const width=Math.floor(bounds.width*window.devicePixelRatio/8)*8/window.devicePixelRatio;highlightController.setSquareSize(width/8);highlightController.tryRepaint();};callback();// observer resize  of a parentNode
+const observer=new ResizeObserver(callback);observer.observe(container);}function watchForChessBoardOrientationChange(highlightController){const container=document.querySelector("cg-container");if(!container){error("<cg-container> not found");return;}const parentNode=container.parentNode;// observer mutations of a parentNode
+if(!parentNode){error("<cg-container> has no parentNode");return;}const callback=()=>{log("<cg-container> mutated");highlightController.setOrientation(parentNode.classList.contains("orientation-black")?"black":"white");highlightController.tryRepaint();};callback();const observer=new MutationObserver(callback);observer.observe(parentNode,{attributes:true,attributeFilter:["class"]});}
 ;// CONCATENATED MODULE: ./src/index.tsx
-log("React script has successfully started");const features=[HighlighterFeature];async function onUrlChange(){log("Testing ".concat(features.length," features"));let executedWithSuccess=0;for(const feature of features){if(feature.canExecute(window.location.href)){try{await feature.execute();executedWithSuccess++;}catch(e){error("Feature ".concat(feature.name," failed to execute"));error(e);}}}log("Executed ".concat(executedWithSuccess,"/").concat(features.length," features"));}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",watchForUrlChange);}else{watchForUrlChange();}function watchForUrlChange(){// Call `onUrlChange()` every time the page URL changes, including on first load.
+log("React script has successfully started");const features=[HighlighterFeature];async function onUrlChange(){log("Testing ".concat(features.length," features"));let executedWithSuccess=0;for(const feature of features){if(feature.canExecute(window.location.href)){try{await feature.execute(window.location.href);executedWithSuccess++;}catch(e){error("Feature ".concat(feature.name," failed to execute"));error(e);}}}log("Executed ".concat(executedWithSuccess,"/").concat(features.length," features"));}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",watchForUrlChange);}else{watchForUrlChange();}function watchForUrlChange(){// Call `onUrlChange()` every time the page URL changes, including on first load.
 addLocationChangeCallback(()=>{// Greasemonkey doesn't bubble errors up to the onUrlChange console,
 // so we have to catch them manually and log them
 onUrlChange().catch(e=>{log(e);});});}
